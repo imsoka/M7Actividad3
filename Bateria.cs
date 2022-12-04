@@ -15,7 +15,6 @@ namespace M7Actividad3
     [Description("Muestra el nivel de carga de una batería")]
     public partial class Bateria : UserControl
     {
-        private const int BATTERY_FULL = 0;
         private const int BATTERY_EMPTY = 209;
         private const int BATTERY_LEVEL_X_START_POSITION = 8;
         private const int BATTERY_LEVEL_Y_START_POSITION = 15;
@@ -25,8 +24,6 @@ namespace M7Actividad3
         double chargeLevel;
         bool charging;
         bool dragging;
-        int startDragXLocation;
-        int startDragYLocation;
 
         public class Argumentos : EventArgs
         {
