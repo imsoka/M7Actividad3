@@ -41,6 +41,9 @@
             this.Name = "Bateria";
             this.Size = new System.Drawing.Size(123, 233);
             this.Layout += new System.Windows.Forms.LayoutEventHandler(this.Bateria_Layout);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Bateria_MouseDoubleClick);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bateria_MouseDown);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Bateria_MouseUp);
             this.ResumeLayout(false);
 
         }
