@@ -43,6 +43,7 @@
             this.Layout += new System.Windows.Forms.LayoutEventHandler(this.Bateria_Layout);
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Bateria_MouseDoubleClick);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bateria_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Bateria_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Bateria_MouseUp);
             this.ResumeLayout(false);
 

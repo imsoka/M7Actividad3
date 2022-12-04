@@ -99,8 +99,6 @@ namespace M7Actividad3
             }
         }
 
-
-
         protected override void OnPaint(PaintEventArgs e)
         {   
             base.OnPaint(e);
@@ -173,16 +171,6 @@ namespace M7Actividad3
             return (int)newPercent;
         }
 
-        private bool mouseMoved(int X, int Y)
-        {
-            if(startDragXLocation != X || startDragYLocation != Y)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
         private void Bateria_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (!isInsideBattery(e.Location.X, e.Location.Y)) return;
@@ -194,14 +182,18 @@ namespace M7Actividad3
         {
             if (!isInsideBattery(e.Location.X, e.Location.Y)) return;
 
-            startDragXLocation = e.Location.X;
-            startDragYLocation = e.Location.Y;
+            dragging = true;
         }
 
         private void Bateria_MouseUp(object sender, MouseEventArgs e)
         {
+            dragging = false;
+        }
+
+        private void Bateria_MouseMove(object sender, MouseEventArgs e)
+        {
             if (!isInsideBattery(e.Location.X, e.Location.Y)) return;
-            if (!mouseMoved(e.Location.X, e.Location.Y)) return;
+            if (!dragging) return;
 
             Porcentaje = getBatteryPercentageByPosition(e.Location.Y);
         }
